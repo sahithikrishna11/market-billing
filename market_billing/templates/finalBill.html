@@ -1,0 +1,148 @@
+<h1> final bill </h1>
+<table>
+	<tr>
+		<th>Name</th>&nbsp
+		<th>Discount</th>&nbsp
+		<th></th>&nbsp
+		<th>Price</th>
+	</tr>
+	<tr>
+	</tr>
+	{% if CH1.1 %}
+		{% for i in CH1.2 %}
+		<tr>
+		<td>{{CH1.0}}</td>&nbsp
+		<td></td>&nbsp
+		<td></td>&nbsp
+		<td>{{CH1.3}}</td>
+		</tr>
+		{% endfor %}
+	{% endif %}
+	{% if CF1.1 %}
+			{% if CF1.4.0 %}
+				{% for i in CF1.2 %}
+					<tr>
+						<td>{{CF1.0}}</td>&nbsp
+						<td></td>&nbsp
+						<td></td>&nbsp
+						<td>{{CF1.3}}</td>
+					</tr>
+				{% endfor %}
+				{% for i in CF1.4.2 %}
+					<tr>
+						<td></td>&nbsp
+						<td>BOGO</td>&nbsp
+						<td></td>&nbsp
+						<td>{{CF1.4.1}}</td>
+					</tr>
+				{% endfor %}
+			{% else %}
+				{% for n in CF1.2 %}
+					<tr>
+						<td>{{CF1.0}}</td>&nbsp
+						<td></td>&nbsp
+						<td></td>&nbsp
+						<td>{{CF1.3}}</td>
+					</tr>
+				{% endfor %}
+			{% endif %}
+	{% endif %}
+	{% if MK1.1 %}
+		{% if MK1.4.0 %}
+			{% for j in MK1.2 %}
+				<tr>
+					<td>{{MK1.0}}</td>&nbsp
+					<td></td>&nbsp
+					<td></td>&nbsp
+					<td>{{MK1.3}}</td>
+				</tr>
+			{% endfor %}
+			{% for i in MK1.4.2 %}
+				<tr>
+					<td></td>&nbsp
+					<td>CHMK</td>&nbsp
+					<td></td>&nbsp
+					<td>{{MK1.4.1}}</td>
+				</tr>
+			{% endfor %}
+		{% else %}
+			{% for m in MK1.2 %}
+				<tr>
+					<td>{{MK1.0}}</td>&nbsp
+					<td></td>&nbsp
+					<td></td>&nbsp
+					<td>{{MK1.3}}</td>
+				</tr>
+			{% endfor %}
+		{% endif %}
+	{% endif %}
+	{% if AP1.1 %}
+			{% if AP1.4.0 %}
+				{% for k in AP1.2 %}
+					<tr>
+						<td>{{AP1.0}}</td>&nbsp
+						<td></td>&nbsp
+						<td></td>&nbsp
+						<td>{{AP1.3}}</td>
+					</tr>
+				{% endfor %}
+				{% for i in AP1.4.2 %}
+					<tr>
+						<td></td>&nbsp
+						<td>APPL</td>&nbsp
+						<td></td>&nbsp
+						<td>{{AP1.4.1}}</td>
+					</tr>
+				{% endfor %}
+			{% else %}
+				{% for l in AP1.2 %}
+					<tr>
+						<td>{{AP1.0}}</td>&nbsp
+						<td></td>&nbsp
+						<td></td>&nbsp
+						<td>{{AP1.3}}</td>
+					</tr>
+				{% endfor %}
+			{% endif %}
+	{% endif %}
+	{% if OM1.1 %}
+		{% if OM1.4.0 %}
+			{% for p in OM1.2 %}
+				<tr>
+					<td>{{OM1.0}}</td>&nbsp
+					<td></td>&nbsp
+					<td></td>&nbsp
+					<td>{{OM1.3}}</td>
+				</tr>
+			{% endfor %}
+			{% for i in OM1.4.2 %}
+				<tr>
+					<td></td>&nbsp
+					<td>APOM</td>&nbsp
+					<td></td>&nbsp
+					<td>{{OM1.4.1}}</td>
+				</tr>
+			{% endfor %}
+		{% else %}
+			{% for o in OM1.2 %}
+				<tr>
+					<td>{{OM1.0}}</td>&nbsp
+					<td></td>&nbsp
+					<td></td>&nbsp
+					<td>{{OM1.3}}</td>
+				</tr>
+			{% endfor %}
+		{% endif %}
+	{% endif %}
+<tr>
+	<td><hr></td>
+	<td><hr></td>
+	<td><hr></td>
+</tr>
+<tr>
+	<td>final price</td>
+	<td></td>
+	<td>{{total_amount}}</td>
+</tr>
+</table>
+     
